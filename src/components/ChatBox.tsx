@@ -1,7 +1,6 @@
 // src/components/ChatBox.tsx
 import { useState, useEffect } from "react";
 import { Send } from "lucide-react";
-import html2pdf from "html2pdf.js";
 import { fetchGeminiResponse } from "../utils/api";
 import { saveChatToStorage } from "../utils/storage";
 

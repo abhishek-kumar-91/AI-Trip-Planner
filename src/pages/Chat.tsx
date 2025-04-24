@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import ChatSidebar from "../components/ChatSidebar";
 import ChatBox from "../components/ChatBox";
 import { Shimmer } from "react-shimmer"; // Import Simmer or create your own spinner
-import { getAllChats } from "../utils/storage";
+
 
 const Chat = () => {
   const [loading, setLoading] = useState(true);
