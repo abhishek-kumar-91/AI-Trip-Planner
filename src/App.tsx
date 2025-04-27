@@ -19,29 +19,21 @@ function App() {
         {/* Public or Redirect routes */}
         <Route
           path="/"
-          element={
-            isSignedIn ? <Navigate to="/dashboard" replace /> : <WelcomePage />
-          }
+          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <WelcomePage />}
         />
         <Route
           path="/sign-in"
-          element={
-            isSignedIn ? <Navigate to="/dashboard" replace /> : <SignIn path="/sign-in" routing="path" />
-          }
+          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <SignIn />}
         />
         <Route
           path="/sign-up"
-          element={
-            isSignedIn ? <Navigate to="/dashboard" replace /> : <SignUp path="/sign-up" routing="path" />
-          }
+          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <SignUp />}
         />
 
         {/* Protected dashboard routes */}
         <Route
           path="/dashboard/*"
-          element={
-            isSignedIn ? <DashboardLayout /> : <Navigate to="/" replace />
-          }
+          element={isSignedIn ? <DashboardLayout /> : <Navigate to="/" replace />}
         />
 
         {/* Catch-all 404 */}
