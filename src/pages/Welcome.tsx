@@ -1,9 +1,8 @@
-import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Globe2, PlaneTakeoff } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const WelcomePage = () => {
-  const navigate = useNavigate();
 
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white px-4 relative overflow-hidden">
@@ -42,8 +41,8 @@ const WelcomePage = () => {
       </motion.p>
 
       {/* CTA Button */}
+      <Link to="/sign-in">
       <motion.button
-        onClick={() => navigate("/chat")}
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 1, duration: 0.7 }}
@@ -53,6 +52,7 @@ const WelcomePage = () => {
         <PlaneTakeoff className="w-5 h-5" />
         Start Planning
       </motion.button>
+      </Link>
     </div>
   );
 };
