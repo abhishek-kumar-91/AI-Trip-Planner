@@ -1,5 +1,25 @@
 @import "tailwindcss";
 
+.bgImage {
+  position: relative;
+  background-image: url("/public/mt.jpeg");
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+
+body{
+  background-color: #fbf9f5;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Black with 50% opacity */
+  z-index: 1;
+  border-radius: 32px;
+}
+
 
 @keyframes blink {
     50% {
