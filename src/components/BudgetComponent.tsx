@@ -1,6 +1,7 @@
 import React from 'react';
 import Chart from 'react-apexcharts';
-import { ApexOptions } from 'apexcharts'; // ✅ import ApexOptions
+import { ApexOptions } from 'apexcharts';
+import { ChartPie, Ellipsis } from 'lucide-react';
 
 interface BudgetDonutChartProps {
   budget: number;
@@ -10,9 +11,9 @@ interface BudgetDonutChartProps {
 const BudgetComponent: React.FC<BudgetDonutChartProps> = ({ budget, expense }) => {
   const remaining = Math.max(budget - expense, 0);
 
-  const chartOptions: ApexOptions = {  // ✅ type explicitly
+  const chartOptions: ApexOptions = {
     chart: {
-      type: 'donut', // ✅ now safely accepted because of ApexOptions type
+      type: 'donut',
     },
     labels: ['Spent', 'Budget'],
     colors: ['#fee371', '#0b5e57'],
@@ -30,7 +31,7 @@ const BudgetComponent: React.FC<BudgetDonutChartProps> = ({ budget, expense }) =
     plotOptions: {
       pie: {
         donut: {
-          size: '40%' // Increase thickness
+          size: '40%'
         }
       }
     }
@@ -41,7 +42,7 @@ const BudgetComponent: React.FC<BudgetDonutChartProps> = ({ budget, expense }) =
   return (
     <div className="w-[20%] h-full bg-white p-4 rounded-xl shadow-md">
       <div className=" text-gray-700">
-      <h2 className="text-xl font-semibold">BUDGET</h2>
+      <div className="flex justify-between items-center"><h2 className="text-lg flex gap-2 items-center font-semibold"><ChartPie />BUDGET</h2><Ellipsis className="text-gray-400 bg-gray-100 rounded-full text-xs p-1 cursor-pointer" /></div>
         <span className='text-xs bg-gray-100 font-bold px-2 rounded-2xl'><span className="font-medium text-xs">Total:</span> ${budget}</span>
       </div>
       

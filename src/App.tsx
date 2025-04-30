@@ -4,6 +4,7 @@ import DashboardLayout from "./pages/DashboardLayout";
 import { useAuth, SignIn, SignUp } from "@clerk/clerk-react";
 import HeaderComponent from "./components/HeaderComponent";
 import NotFoundPage from "./pages/NotFoundPage";
+import NewTrip from "./pages/NewTrip";
 
 function App() {
   const { isLoaded, isSignedIn } = useAuth();
@@ -23,17 +24,22 @@ function App() {
         />
         <Route
           path="/sign-in"
-          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <SignIn />}
+          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <div className="justify-center flex items-center h-screen"><SignIn /></div>}
         />
         <Route
           path="/sign-up"
-          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <SignUp />}
+          element={isSignedIn ? <Navigate to="/dashboard" replace /> : <div className="justify-center flex items-center h-screen"> <SignUp /></div>}
         />
 
         {/* Protected dashboard routes */}
         <Route
           path="/dashboard/*"
           element={isSignedIn ? <DashboardLayout /> : <Navigate to="/" replace />}
+        />
+
+        <Route
+          path="/new-trip"
+          element={isSignedIn ? <NewTrip /> : <Navigate to="/" replace />}
         />
 
         {/* Catch-all 404 */}

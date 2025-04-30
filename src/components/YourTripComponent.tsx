@@ -1,11 +1,11 @@
 
 function YourTripComponent() {
   return (
-    <div className="w-[24%] flex flex-col px-4 py-5 bgImage rounded-4xl">
+    <div className="w-[30%] flex flex-col px-4 py-5 bgImage rounded-4xl">
       <div className="overlay"></div>
       <div className="flex w-full justify-between items-center pb-6">
       <h4 className="text-white z-50 font-semibold ">YOUR TRIP</h4>
-      <select className="text-white z-50 font-semibold bg-gray-950 px-2 py-1 rounded-lg border-none">
+      <select className="text-white z-40 font-semibold bg-gray-950 px-2 py-1 rounded-lg border-none">
         <option value={"Nepal"}>Nepal</option>
         <option value={"Kashmiri"}>Kashmiri</option>
       </select>

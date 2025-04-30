@@ -6,11 +6,8 @@ const WelcomePage = () => {
 
   return (
     <div className="h-screen flex flex-col items-center justify-center bg-gradient-to-br from-[#0f172a] via-[#1e293b] to-[#0f172a] text-white px-4 relative overflow-hidden">
-      {/* Animated glowing background */}
       <div className="absolute top-1/2 -left-40 w-96 h-96 bg-blue-500 opacity-20 blur-3xl rounded-full animate-pulse" />
       <div className="absolute bottom-10 right-10 w-60 h-60 bg-purple-500 opacity-20 blur-3xl rounded-full animate-pulse" />
-
-      {/* Icon */}
       <motion.div
         initial={{ opacity: 0, scale: 0.6 }}
         animate={{ opacity: 1, scale: 1 }}
@@ -20,7 +17,6 @@ const WelcomePage = () => {
         <Globe2 className="w-20 h-20 text-blue-400 drop-shadow-xl" />
       </motion.div>
 
-      {/* Heading */}
       <motion.h1
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -29,8 +25,6 @@ const WelcomePage = () => {
       >
         Plan Your Perfect Trip 
       </motion.h1>
-
-      {/* Subtext */}
       <motion.p
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
@@ -40,7 +34,6 @@ const WelcomePage = () => {
         Discover destinations, create itineraries, and get travel-ready with your personal AI planner.
       </motion.p>
 
-      {/* CTA Button */}
       <Link to="/sign-in">
       <motion.button
         initial={{ opacity: 0, y: 20 }}

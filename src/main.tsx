@@ -18,7 +18,9 @@ createRoot(document.getElementById('root')!).render(
        signUpUrl="/sign-up">
     <BrowserRouter>
     
+      
       <App />
+      
     </BrowserRouter>
     </ClerkProvider>
   </StrictMode>,

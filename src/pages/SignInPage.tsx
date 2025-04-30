@@ -14,9 +14,10 @@ function SignInPage() {
   }, [isSignedIn, navigate]);
 
   return (
-    <div style={{ marginTop: "50px" }}>
-      <SignIn path="/sign-in" routing="path" />
-    </div>
+    <div className="bg-red-500">
+      <SignIn />
+     </div>
+   
   );
 }
 
