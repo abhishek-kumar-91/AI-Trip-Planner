@@ -1,7 +1,6 @@
 import {
   SignedIn,
   SignedOut,
-  SignInButton,
   UserButton,
 } from "@clerk/clerk-react";
 import { Bell, LayoutDashboard, Mail, Plus, Ribbon } from "lucide-react";
