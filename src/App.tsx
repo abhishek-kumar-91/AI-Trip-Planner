@@ -5,6 +5,7 @@ import { useAuth, SignIn, SignUp } from "@clerk/clerk-react";
 import HeaderComponent from "./components/HeaderComponent";
 import NotFoundPage from "./pages/NotFoundPage";
 import NewTrip from "./pages/NewTrip";
+import YourTrip from "./pages/YourTrip";
 
 function App() {
   const { isLoaded, isSignedIn } = useAuth();
@@ -40,6 +41,10 @@ function App() {
         <Route
           path="/new-trip"
           element={isSignedIn ? <NewTrip /> : <Navigate to="/" replace />}
+        />
+        <Route
+          path="/your-trip"
+          element={isSignedIn ? <YourTrip /> : <Navigate to="/" replace />}
         />
 
         {/* Catch-all 404 */}
