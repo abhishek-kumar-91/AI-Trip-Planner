@@ -1,7 +1,7 @@
 
 function NotFoundPage() {
   return (
-    <div>NotFoundPage</div>
+    <div>Redesign the Not found page latter</div>
   )
 }
 
